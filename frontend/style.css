@@ -1,0 +1,155 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  padding: 30px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+/* Container */
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Select */
+#languageSelect,
+textarea,
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+#languageSelect,
+textarea {
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+#languageSelect:focus,
+textarea:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+/* Button */
+button {
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #005ccc;
+  transform: scale(1.05);
+}
+
+body.dark textarea,
+body.dark #languageSelect {
+  background: #2b2b2b;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark button {
+  background-color: #3390ff;
+}
+
+/* Output */
+.output {
+  margin-top: 30px;
+  padding: 15px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #333;
+  min-height: 50px;
+  white-space: pre-wrap;
+  animation: fadeIn 0.5s ease;
+}
+
+body.dark .output {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+/* Spinner */
+#loadingSpinner {
+  display: none;
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #0077ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Toggle Button */
+.toggle-dark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid #0077ff;
+  color: #0077ff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.toggle-dark:hover {
+  background: #0077ff;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

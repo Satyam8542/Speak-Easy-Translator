@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speak Easy Translator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button class="toggle-dark" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <div class="container">
+    <h1>🎤 Speak Easy Translator</h1>
+    <button onclick="startRecognition()">Start Speaking</button>
+    <p id="speechOutput"></p>
+
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="ar">Arabic</option>
+      <option value="az">Azerbaijani</option>
+      <option value="zh">Chinese</option>
+      <option value="cs">Czech</option>
+      <option value="nl">Dutch</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+      <option value="hi">Hindi</option>
+      <option value="hu">Hungarian</option>
+      <option value="id">Indonesian</option>
+      <option value="ga">Irish</option>
+      <option value="it">Italian</option>
+      <option value="ja">Japanese</option>
+      <option value="ko">Korean</option>
+      <option value="fa">Persian</option>
+      <option value="pl">Polish</option>
+      <option value="pt">Portuguese</option>
+      <option value="ru">Russian</option>
+      <option value="sk">Slovak</option>
+      <option value="es">Spanish</option>
+      <option value="sv">Swedish</option>
+      <option value="tr">Turkish</option>
+      <option value="uk">Ukrainian</option>
+      <option value="ur">Urdu</option>
+      <option value="vi">Vietnamese</option>
+    </select>
+
+    <button onclick="translateText()">Translate</button>
+
+    <!-- Spinner while translating -->
+    <div id="loadingSpinner"></div>
+
+    <!-- Translation result -->
+    <div class="output" id="translationResult"></div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="script`.js"></script>
+
+</body>
+</html>
