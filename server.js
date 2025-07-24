@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const translateRoutes = require('./routes/translate');
+const translateRoutes = require('./backend/routes/translate');
 require('dotenv').config();
 
 const app = express();
